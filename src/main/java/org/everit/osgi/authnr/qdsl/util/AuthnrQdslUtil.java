@@ -23,7 +23,8 @@ public interface AuthnrQdslUtil {
 
     /**
      * Creates a predicate for a Querydsl based SQL query. If the predicate is appended to the where part of the main
-     * query, the results will be filtered based on authorization.<br>
+     * query, the results will be filtered based on authorization. The authorizedResourceId must be provided by the
+     * implementation, that is typically the same as the authenticated resourceId.<br>
      * <br>
      * E.g.: Users and books are resources. Users can view and edit books. To list the books that the currently
      * authenticated user can view or edit, the following code snippet should be used:
@@ -31,10 +32,10 @@ public interface AuthnrQdslUtil {
      * <pre>
      * QBook book = QBook.book;
      * BooleanExpression authrPredicate =
-     *         authorizationQdslUtil.authorizationPredicate(book.resourceId, "read", "edit");
-     * 
+     *         authnrQdslUtil.authorizationPredicate(book.resourceId, "read", "edit");
+     *
      * SQLQuery query = new SQLQuery(connection, configuration);
-     * 
+     *
      * return query.from(book)...where(authrPredicate)...list(...);
      * </pre>
      *
