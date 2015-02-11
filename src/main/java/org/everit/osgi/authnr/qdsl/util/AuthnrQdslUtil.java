@@ -19,6 +19,9 @@ package org.everit.osgi.authnr.qdsl.util;
 import com.mysema.query.types.Expression;
 import com.mysema.query.types.expr.BooleanExpression;
 
+/**
+ * Utility API to create the permission checks easily for Querydsl based SQL queries.
+ */
 public interface AuthnrQdslUtil {
 
     /**
@@ -33,9 +36,9 @@ public interface AuthnrQdslUtil {
      * QBook book = QBook.book;
      * BooleanExpression authrPredicate =
      *         authnrQdslUtil.authorizationPredicate(book.resourceId, "read", "edit");
-     *
+     * 
      * SQLQuery query = new SQLQuery(connection, configuration);
-     *
+     * 
      * return query.from(book)...where(authrPredicate)...list(...);
      * </pre>
      *
