@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    This file is part of Everit - Authenticated Authorization Querydsl Util API.
+    Copyright (C) 2011 Everit Kft. (http://www.everit.biz)
 
-    Everit - Authenticated Authorization Querydsl Util API is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Lesser General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-    Everit - Authenticated Authorization Querydsl Util API is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Lesser General Public License for more details.
+            http://www.apache.org/licenses/LICENSE-2.0
 
-    You should have received a copy of the GNU Lesser General Public License
-    along with Everit - Authenticated Authorization Querydsl Util API.  If not, see <http://www.gnu.org/licenses/>.
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
 
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
+
   <parent>
     <groupId>org.everit.config</groupId>
     <artifactId>org.everit.config.oss</artifactId>
-    <version>5.0.2</version>
+    <version>7.0.1</version>
   </parent>
 
-  <groupId>org.everit.osgi</groupId>
-  <artifactId>org.everit.osgi.authnr.qdsl.util.api</artifactId>
-  <version>1.0.0</version>
+  <groupId>org.everit.authnr</groupId>
+  <artifactId>org.everit.authnr.qdsl.util.api</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
 
   <packaging>bundle</packaging>
 
@@ -79,7 +79,6 @@
       <plugin>
         <groupId>org.apache.felix</groupId>
         <artifactId>maven-bundle-plugin</artifactId>
-        <version>2.5.3</version>
         <extensions>true</extensions>
         <configuration>
           <instructions>
@@ -87,23 +86,10 @@
               *
             </Import-Package>
             <Export-Package>
-              org.everit.osgi.authnr.qdsl.util;version=1.0.0
+              org.everit.authnr.qdsl.util;version=1.0.0
             </Export-Package>
           </instructions>
         </configuration>
-      </plugin>
-      <plugin>
-        <groupId>net.distilledcode.maven</groupId>
-        <artifactId>baselining-maven-plugin</artifactId>
-        <version>1.0.4</version>
-        <executions>
-          <execution>
-            <id>baseline</id>
-            <goals>
-              <goal>baseline</goal>
-            </goals>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
   </build>
@@ -112,7 +98,7 @@
     <dependency>
       <groupId>com.mysema.querydsl</groupId>
       <artifactId>querydsl-sql</artifactId>
-      <version>3.6.0</version>
+      <version>3.6.8</version>
     </dependency>
   </dependencies>
 
