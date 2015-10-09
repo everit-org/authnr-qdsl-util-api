@@ -36,9 +36,9 @@ public interface AuthnrQdslUtil {
    * QBook book = QBook.book;
    * BooleanExpression authrPredicate =
    *         authnrQdslUtil.authorizationPredicate(book.resourceId, "read", "edit");
-   * 
+   *
    * SQLQuery query = new SQLQuery(connection, configuration);
-   * 
+   *
    * return query.from(book)...where(authrPredicate)...list(...);
    * </pre>
    *
