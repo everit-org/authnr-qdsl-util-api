@@ -15,11 +15,11 @@ BooleanExpression authrPredicate =
 
 SQLQuery query = new SQLQuery(connection, configuration);
 
-return query.from(book)...where(authrPredicate)...list(...);
+return query.select(...)...from(book)...where(authrPredicate)...fetch();
 ```
 
 For more information check the javadoc of the 
-__org.everit.osgi.authnr.qdsl.util.AuthnrQdslUtil__ interface.
+__org.everit.authnr.qdsl.util.AuthnrQdslUtil__ interface.
 
 [![Analytics](https://ga-beacon.appspot.com/UA-15041869-4/everit-org/authnr-qdsl-util-api)](https://github.com/igrigorik/ga-beacon) 
 
