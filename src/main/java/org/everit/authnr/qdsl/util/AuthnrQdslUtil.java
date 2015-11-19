@@ -15,8 +15,8 @@
  */
 package org.everit.authnr.qdsl.util;
 
-import com.mysema.query.types.Expression;
-import com.mysema.query.types.expr.BooleanExpression;
+import com.querydsl.core.types.Expression;
+import com.querydsl.core.types.dsl.BooleanExpression;
 
 /**
  * Utility API to create the permission checks easily for Querydsl based SQL queries.
